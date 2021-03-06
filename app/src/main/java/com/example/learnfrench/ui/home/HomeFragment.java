@@ -13,6 +13,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.lifecycle.ViewModelProviders;
 import androidx.navigation.Navigation;
 
 import com.example.learnfrench.R;
@@ -25,7 +26,7 @@ public class HomeFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         homeViewModel =
-                new ViewModelProvider(this).get(HomeViewModel.class);
+                ViewModelProviders.of(this).get(HomeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_home, container, false);
         basic=root.findViewById(R.id.basic);
         intermediate=root.findViewById(R.id.intermediate);
@@ -33,6 +34,7 @@ public class HomeFragment extends Fragment {
         TextView basicText=root.findViewById(R.id.basicText);
         TextView textintermediate=root.findViewById(R.id.textintermediate);
         TextView textadvance=root.findViewById(R.id.textadvance);
+
         basic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

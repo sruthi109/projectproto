@@ -11,6 +11,38 @@
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home">
 
+        <action
+            android:id="@+id/action_nav_home_to_nav_Basic_level"
+            app:destination="@id/nav_Basic_level" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_advance_level"
+            app:destination="@id/nav_advance_level" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_intermediate_level"
+            app:destination="@id/nav_intermediate_level" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_advance_level"
+        android:name="com.example.learnfrench.ui.advancelevel.AdvanceFragment"
+        android:label="Advance Level"
+        tools:layout="@layout/fragment_advance">
+
+    </fragment>
+    <fragment
+        android:id="@+id/nav_Basic_level"
+        android:name="com.example.learnfrench.ui.basicLevel.BasicFragment"
+        android:label="Basic Level"
+        tools:layout="@layout/fragment_basic">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_intermediate_level"
+        android:name="com.example.learnfrench.ui.intermediatelevel.IntermediateFragment"
+        android:label="Intermediate Level"
+        tools:layout="@layout/fragment_intermediate">
+
     </fragment>
 
 
